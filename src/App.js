@@ -1,10 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 import {useEffect, useState} from "react";
 
 function App() {
-    const [movie, setMovie] = useState({});
+    const [movie, setMovie] = useState([]);
     useEffect(()=>{
         axios.get(`http://netflix.sf331.site/movies.json`).then((response) => {
             setMovie(response.data);
